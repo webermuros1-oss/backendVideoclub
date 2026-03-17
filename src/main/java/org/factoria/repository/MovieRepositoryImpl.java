@@ -10,12 +10,12 @@ public class MovieRepositoryImpl {
 
     public void createMovie(Movie movie){
 
-        String querySQLCreate = "INSERT INTO movies(title, year, director, main_cast, filmaffinity_score, description, img, url, rank) VALUES ('"
+        String querySQLCreate = "INSERT INTO movies(title, year, director, main_cast, filmaffinity_score, description, img, url, ranking) VALUES ('"
                 + movie.getTitle() + "',"
                 + movie.getYear() + ",'"
                 + movie.getDirector() + "','"
                 + movie.getMain_cast() + "',"
-                + movie.getFilmaffinity_score() + ",'"
+                + movie.getFilmAffinity_score() + ",'"
                 + movie.getDescription() + "','"
                 + movie.getImg() + "','"
                 + movie.getUrl() + "',"

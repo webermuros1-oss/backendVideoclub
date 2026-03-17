@@ -4,19 +4,25 @@ public class Movie {
 
     private int id;
     private String title;
-    private double year;
+    private int year;
     private String director;
     private String main_cast;
-    private double FilmAffinity_score;
+    private double filmAffinity_score;
     private String description;
     private String img;
     private String url;
     private double rank;
 
-    public Movie(String title, String director, double FilmAffinity_score) {
+    public Movie(String title, int year, String director, double filmAffinity_score, String description, String img, String url, double rank) {
         this.title = title;
+        this.year = year;
+        this.main_cast = main_cast;
         this.director = director;
-        this.FilmAffinity_score = FilmAffinity_score;
+        this.filmAffinity_score = filmAffinity_score;
+        this.description = description;
+        this.img = img;
+        this.url = url;
+        this.rank = rank;
     }
 
     public int getId() {
@@ -31,7 +37,7 @@ public class Movie {
         this.title = title;
     }
 
-    public double getYear() {
+    public int getYear() {
         return year;
     }
 
@@ -55,12 +61,12 @@ public class Movie {
         this.main_cast = main_cast;
     }
 
-    public double getFilmaffinity_score() {
-        return FilmAffinity_score;
+    public double getFilmAffinity_score() {
+        return filmAffinity_score;
     }
 
-    public void setFilmaffinity_score(double filmaffinity_score) {
-        this.FilmAffinity_score = filmaffinity_score;
+    public void setFilmAffinity_score(double filmAffinity_score) {
+        this.filmAffinity_score = filmAffinity_score;
     }
 
     public String getDescription() {
