@@ -13,7 +13,7 @@ public class Movie {
     private String url;
     private double rank;
 
-    public Movie(String title, int year, String director, double filmAffinity_score, String description, String img, String url, double rank) {
+    public Movie(String title, int year, String director, String main_cast, double filmAffinity_score, String description, String img, String url, double rank) {
         this.title = title;
         this.year = year;
         this.main_cast = main_cast;

@@ -14,7 +14,7 @@ public class MovieView {
     }
 
     public void createMovieView() {
-        Movie movie = new Movie("Nueva Vista", 2000, "Director", 1.99, "Descripción", "img.jpg", "https://url.com", 5);
+        Movie movie = new Movie("Nueva Vista", 2000, "Director","juan manuel ,dolores herrera", 1.99, "Descripción", "img.jpg", "https://url.com", 5);
         movieController.createMovieController(movie);
     }
 
@@ -50,7 +50,7 @@ public class MovieView {
         System.out.println("Escriba el ranking: ");
         double rank = scanner.nextDouble();
 
-        Movie movie = new Movie(title, year, director, filmAffinity_score, description, img, url, rank);
+        Movie movie = new Movie(title, year, director,main_cast, filmAffinity_score, description, img, url, rank);
         movieController.createMovieController(movie);
 
         scanner.close();
