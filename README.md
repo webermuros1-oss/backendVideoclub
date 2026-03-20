@@ -194,3 +194,6 @@ movieView.showMovies();     // Listar todas las películas
 - Las credenciales de la base de datos están hardcodeadas en `DBManager.java`. En un entorno real deberían cargarse desde variables de entorno o un archivo de configuración.
 - La interfaz `MovieRepository.java` existe como base para aplicar el principio de inversión de dependencias (SOLID), pero actualmente está vacía.
 - El proyecto usa `PreparedStatement` para todas las consultas, lo que previene inyección SQL.
+
+
+## Este ejercicio (projecto) esta realizado por Heber Paris Caamaño
