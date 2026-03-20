@@ -3,6 +3,7 @@ package org.factoria.view;
 import org.factoria.controller.MovieController;
 import org.factoria.model.Movie;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class MovieView {
@@ -11,11 +12,6 @@ public class MovieView {
 
     public MovieView(MovieController movieController) {
         this.movieController = movieController;
-    }
-
-    public void createMovieView() {
-        Movie movie = new Movie("Nueva Vista", 2000, "Director","juan manuel ,dolores herrera", 1.99, "Descripción", "img.jpg", "https://url.com", 5);
-        movieController.createMovieController(movie);
     }
 
     public void generateMovie() {
@@ -50,9 +46,17 @@ public class MovieView {
         System.out.println("Escriba el ranking: ");
         double rank = scanner.nextDouble();
 
-        Movie movie = new Movie(title, year, director,main_cast, filmAffinity_score, description, img, url, rank);
+        Movie movie = new Movie(title, year, director, main_cast, filmAffinity_score, description, img, url, rank);
         movieController.createMovieController(movie);
 
         scanner.close();
+    }
+
+    public void showMovies() {
+        List<Movie> movieList = movieController.findAllController();
+
+        for (Movie movie : movieList) {
+            System.out.println("title: " + movie.getTitle() + " year: " + movie.getYear() + " director: " + movie.getDirector() + " main_cast: " + movie.getMain_cast() + " filmAffinity_score: " + movie.getFilmAffinity_score() + " description: " + movie.getDescription() + " img: " + movie.getImg() + " url: " + movie.getUrl() + " ranking: " + movie.getRank());
+        }
     }
 }

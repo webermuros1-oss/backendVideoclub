@@ -3,6 +3,8 @@ package org.factoria.controller;
 import org.factoria.model.Movie;
 import org.factoria.repository.MovieRepositoryImpl;
 
+import java.util.List;
+
 public class MovieController {
 
 //EventRepositoryImpl eventRepository = new EventRepositoryImpl();
@@ -13,9 +15,12 @@ public class MovieController {
         this.movieRepository = movieRepository;
     }
 
-    public void createMovieController(Movie movie){
-        movieRepository.createMovie(movie);
 
+    public void createMovieController(Movie movie) {
+        movieRepository.createMovie(movie);
     }
 
+    public List<Movie> findAllController() {
+        return movieRepository.findAll();
+    }
 }
